@@ -775,7 +775,7 @@ h1, h2, h3, p { margin-top: 0; }
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(400px, 455px);
   gap: 40px;
-  align-items: stretch;
+  align-items: start;
   width: 100%;
 }
 /* Left column */
@@ -876,7 +876,7 @@ h2.project-intro-headline,
   border-radius: 14px;
   padding: 22px 22px 18px;
   box-shadow: 0 8px 24px rgba(234, 88, 12, 0.06);
-  margin-top: auto;
+  margin-top: 24px;
 }
 .intro-lead-pill {
   display: inline-flex;
@@ -5103,7 +5103,7 @@ figcaption#gallery-caption {
 .visit-section {
   padding-block: 84px 92px;
   color: #ffffff;
-  background: radial-gradient(circle at 15% 40%, #9a3412 0%, #1b365d 60%, #102038 100%);
+  background: radial-gradient(circle at 18% 35%, rgba(234, 88, 12, 0.12) 0%, transparent 55%), linear-gradient(135deg, #0b2545 0%, #102d52 50%, #07172b 100%) !important;
 }
 
 .visit-grid {
@@ -8435,12 +8435,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, label, button,
 
 
 /* ==========================================================================
-   Hero Visual Polish: High-Contrast Luxury Typography & Scrim (Champagne Gold & Crisp White)
+   Hero Visual Polish: High-Contrast Sattva Builder Theme (Vibrant Orange & Deep Royal Navy)
    ========================================================================== */
 .hero-shade {
   background:
-    linear-gradient(90deg, rgba(10, 20, 36, 0.72) 0%, rgba(10, 20, 36, 0.45) 38%, rgba(10, 20, 36, 0.06) 65%, transparent 100%),
-    linear-gradient(180deg, rgba(10, 20, 36, 0.25) 0%, transparent 22%, transparent 75%, rgba(10, 20, 36, 0.35) 100%) !important;
+    linear-gradient(90deg, rgba(7, 23, 43, 0.74) 0%, rgba(7, 23, 43, 0.44) 36%, rgba(7, 23, 43, 0.06) 66%, transparent 100%),
+    linear-gradient(180deg, rgba(7, 23, 43, 0.22) 0%, transparent 22%, transparent 75%, rgba(7, 23, 43, 0.35) 100%) !important;
 }
 
 .hero-title {
@@ -8451,65 +8451,65 @@ h1, h2, h3, h4, h5, h6, p, span, a, label, button,
   line-height: 1.15 !important;
   letter-spacing: -0.02em !important;
   color: #ffffff !important;
-  text-shadow: 0 2px 14px rgba(10, 20, 36, 0.85) !important;
+  text-shadow: 0 2px 14px rgba(7, 23, 43, 0.85) !important;
 }
 
 .hero-title-main {
   color: #ffffff !important;
   font-weight: 700 !important;
-  text-shadow: 0 2px 14px rgba(10, 20, 36, 0.85) !important;
+  text-shadow: 0 2px 14px rgba(7, 23, 43, 0.85) !important;
 }
 
 .hero-title-sub {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #f1f5f9 !important;
   font-weight: 400 !important;
-  text-shadow: 0 2px 12px rgba(10, 20, 36, 0.85) !important;
+  text-shadow: 0 2px 12px rgba(7, 23, 43, 0.85) !important;
 }
 
 .hero-pipe {
-  color: rgba(232, 211, 162, 0.7) !important;
+  color: #fb923c !important;
   font-weight: 300 !important;
   margin: 0 6px !important;
 }
 
-/* Warm Champagne Gold accent — blends harmoniously with green landscape without color clash */
+/* Sattva Signature Warm Orange Accent */
 .hero-gold-text {
-  color: #e8d3a2 !important;
+  color: #fb923c !important;
   font-style: italic !important;
-  font-weight: 500 !important;
-  text-shadow: 0 2px 12px rgba(10, 20, 36, 0.9) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 12px rgba(7, 23, 43, 0.9) !important;
 }
 
 .hero-description {
-  color: rgba(255, 255, 255, 0.92) !important;
-  text-shadow: 0 1px 12px rgba(10, 20, 36, 0.8) !important;
+  color: #f8fafc !important;
+  text-shadow: 0 1px 10px rgba(7, 23, 43, 0.8) !important;
 }
 
 .hero-launch-pill {
-  background: rgba(16, 32, 56, 0.88) !important;
+  background: rgba(11, 37, 69, 0.88) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(232, 211, 162, 0.45) !important;
+  border: 1.5px solid rgba(234, 88, 12, 0.65) !important;
   border-radius: 999px !important;
-  box-shadow: 0 4px 16px rgba(10, 20, 36, 0.4) !important;
-  color: #e8d3a2 !important;
+  box-shadow: 0 4px 16px rgba(7, 23, 43, 0.4) !important;
+  color: #fb923c !important;
 }
 
 .pill-dot {
-  color: #e8d3a2 !important;
+  color: #ea580c !important;
 }
 
 .hero-price-glass {
-  background: rgba(16, 32, 56, 0.88) !important;
+  background: rgba(11, 37, 69, 0.90) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(232, 211, 162, 0.35) !important;
+  border: 1.5px solid rgba(234, 88, 12, 0.45) !important;
   border-radius: 14px !important;
-  box-shadow: 0 8px 30px rgba(10, 20, 36, 0.45) !important;
+  box-shadow: 0 8px 30px rgba(7, 23, 43, 0.45) !important;
 }
 
 .price-glass-eyebrow {
-  color: #e8d3a2 !important;
+  color: #fb923c !important;
   font-weight: 700 !important;
   letter-spacing: 0.14em !important;
 }
@@ -8520,14 +8520,539 @@ h1, h2, h3, h4, h5, h6, p, span, a, label, button,
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
-.price-dot-onwards,
+.price-dot-onwards {
+  color: #f1f5f9 !important;
+}
+
 .price-config-note {
-  color: #e8d3a2 !important;
+  color: #fb923c !important;
 }
 
 @media (max-width: 760px) {
   .hero-shade {
     background:
-      linear-gradient(180deg, rgba(10, 20, 36, 0.58) 0%, rgba(10, 20, 36, 0.28) 40%, rgba(10, 20, 36, 0.52) 100%) !important;
+      linear-gradient(180deg, rgba(7, 23, 43, 0.70) 0%, rgba(7, 23, 43, 0.38) 35%, rgba(7, 23, 43, 0.62) 100%) !important;
+  }
+}
+
+
+/* ==========================================================================
+   Alternate Section Background Colors (Exact parity with Godrej Florenne)
+   Alternating rhythm: White (#ffffff) <-> Warm Cream (#faf8f5)
+   ========================================================================== */
+.project-intro-section {
+  background: #ffffff !important;
+}
+
+.project-detail-section {
+  background: #faf8f5 !important;
+}
+
+.brochure-section {
+  background: #ffffff !important;
+}
+
+.pricing-section {
+  background: #faf8f5 !important;
+}
+
+.neighbourhood-section {
+  background: #ffffff !important;
+}
+
+.approvals-section {
+  background: #faf8f5 !important;
+}
+
+.floorplans-section {
+  background: #ffffff !important;
+}
+
+.amenities-section {
+  background: #faf8f5 !important;
+}
+
+.project-gallery-section {
+  background: #ffffff !important;
+}
+
+.masterplan-section {
+  background: #faf8f5 !important;
+}
+
+.specifications-section {
+  background: #ffffff !important;
+}
+
+.faq-section {
+  background: #faf8f5 !important;
+}
+
+/* Elevated White Cards on #faf8f5 Alternate Sections */
+.project-detail-section .detail-card,
+.pricing-section .pricing-table,
+.pricing-section .pricing-table-row,
+.approvals-section .approval-card,
+.amenities-section .amenity-card,
+.masterplan-section .masterplan-card-sheet,
+.faq-section .faq-item {
+  background: #ffffff !important;
+}
+
+.pricing-section .pricing-table-row {
+  border-bottom: 1px solid rgba(27, 54, 93, 0.08) !important;
+}
+
+.pricing-section .pricing-table-row:hover {
+  background: #fdfaf6 !important;
+}
+
+.amenities-section .amenity-card {
+  border-color: rgba(27, 54, 93, 0.08) !important;
+}
+
+.amenities-section .amenity-card:hover {
+  background: #fdfaf6 !important;
+  box-shadow: 0 8px 24px rgba(27, 54, 93, 0.08) !important;
+}
+
+/* ==========================================================================
+   Clean Button Arrows: Completely REMOVE background circle from ALL buttons
+   ========================================================================== */
+.btn-arrow-circle,
+.nav-arrow-circle,
+.cta-arrow-circle,
+.popup-btn-arrow,
+.submit-arrow,
+.tour-btn-arrow,
+.btn-download-arrow,
+.btn-arrow-icon,
+.button-gold-pill .nav-arrow-circle,
+.hero-form-btn .btn-arrow-circle,
+.btn-sattva-orange .cta-arrow-circle,
+.btn-sattva-orange .btn-download-arrow,
+.btn-sattva-orange .nav-arrow-circle,
+.btn-sattva-orange .submit-arrow,
+.btn-sattva-orange .popup-btn-arrow,
+.button-intro-lead .nav-arrow-circle,
+.button-schedule-tour .tour-btn-arrow,
+.button-visit-submit .submit-arrow,
+.button-popup-submit .popup-btn-arrow,
+.gallery-lightbox-btn-enquire .cta-arrow-circle,
+.button-brochure-download .btn-download-arrow,
+.button-complete-costing .cta-arrow-circle,
+.button-launch-details .cta-arrow-circle {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin-left: 6px !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* Hover state: arrow shifts right, NO background appears */
+.button-gold-pill:hover .nav-arrow-circle,
+.hero-form-btn:hover .btn-arrow-circle,
+.btn-sattva-orange:hover .cta-arrow-circle,
+.btn-sattva-orange:hover .btn-download-arrow,
+.btn-sattva-orange:hover .nav-arrow-circle,
+.btn-sattva-orange:hover .submit-arrow,
+.btn-sattva-orange:hover .popup-btn-arrow,
+.button-schedule-tour:hover .tour-btn-arrow,
+.button-intro-lead:hover .nav-arrow-circle,
+.button-visit-submit:hover .submit-arrow,
+.button-popup-submit:hover .popup-btn-arrow,
+.gallery-lightbox-btn-enquire:hover .cta-arrow-circle,
+.button-brochure-download:hover .btn-download-arrow,
+.button-complete-costing:hover .cta-arrow-circle,
+.button-launch-details:hover .cta-arrow-circle {
+  background: transparent !important;
+  background-color: transparent !important;
+  transform: translateX(3px) !important;
+}
+
+/* Arrow SVG icons inside buttons: crisp, stroke colored to button text */
+.nav-arrow-circle svg,
+.btn-arrow-circle svg,
+.btn-arrow-icon svg {
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+  stroke: currentColor !important;
+  stroke-width: 2.4 !important;
+  fill: none !important;
+  vertical-align: middle !important;
+}
+
+@media (max-width: 768px) {
+  .button-gold-pill.nav-cta .nav-arrow-circle {
+    background: transparent !important;
+    background-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .button-gold-pill.nav-cta .nav-arrow-circle svg {
+    width: 12px !important;
+    height: 12px !important;
+    stroke: currentColor !important;
+  }
+}
+
+
+/* ==========================================================================
+   Section 2 Intro Spacing Fix: Clean 24px gap below paragraph
+   ========================================================================== */
+.project-intro-grid {
+  align-items: start !important;
+}
+
+.project-intro-copy p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.intro-lead-box {
+  margin-top: 24px !important;
+}
+
+
+
+
+/* ==========================================================================
+   Neighbourhood & Location Section: 100% Visible & Fully Responsive
+   ========================================================================== */
+#location,
+.neighbourhood-section {
+  scroll-margin-top: 84px !important;
+}
+
+.neighbourhood-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.location-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+}
+
+.transit-card {
+  background: #ffffff !important;
+  border: 1px solid #e7e5df !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(16, 32, 56, 0.05) !important;
+  padding: 18px 22px 14px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.transit-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(16, 32, 56, 0.09) !important;
+}
+
+.transit-card-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0 0 12px !important;
+  border-bottom: 1.5px solid #f0ecdf !important;
+  margin-bottom: 4px !important;
+}
+
+.transit-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ea580c !important;
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
+}
+
+.transit-category {
+  font-family: var(--sans) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #102038 !important;
+}
+
+.transit-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid #f3eee6 !important;
+  box-sizing: border-box !important;
+}
+
+.transit-row:last-child {
+  border-bottom: none !important;
+}
+
+.transit-name {
+  color: #102038 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  word-break: break-word !important;
+}
+
+.transit-time {
+  color: #ea580c !important;
+  font-weight: 700 !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+  text-align: right !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+  background: #fff7ed !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(234, 88, 12, 0.18) !important;
+}
+
+/* Visual Column */
+.location-visual-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.location-map-frame {
+  width: 100% !important;
+  border: 1px solid #e7e5df !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(16, 32, 56, 0.06) !important;
+  box-sizing: border-box !important;
+}
+
+.location-map-frame > img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 380px !important;
+  display: block !important;
+  object-fit: contain !important;
+  background: #ffffff !important;
+  margin: 0 auto !important;
+}
+
+.map-caption {
+  padding: 10px 14px !important;
+  font-family: var(--sans) !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  color: #102038 !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e7e5df !important;
+  text-align: center !important;
+}
+
+.location-highlights-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.location-check-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: #3b526d !important;
+  background: #faf8f5 !important;
+  padding: 11px 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(27, 54, 93, 0.08) !important;
+  box-sizing: border-box !important;
+}
+
+.location-check-tick {
+  color: #ea580c !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+.location-check-text strong {
+  color: #102038 !important;
+  font-weight: 600 !important;
+}
+
+/* Leaflet Interactive Map Frame */
+.location-leaflet-frame {
+  width: 100% !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid #e7e5df !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(16, 32, 56, 0.06) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.location-leaflet-map {
+  width: 100% !important;
+  height: 300px !important;
+  min-height: 260px !important;
+  background: #eae6df !important;
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 991px) {
+  .neighbourhood-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .neighbourhood-section {
+    padding-block: 46px 54px !important;
+  }
+
+  .neighbourhood-header-block {
+    margin-bottom: 24px !important;
+  }
+
+  .transit-card {
+    padding: 14px 14px 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .transit-row {
+    padding: 8px 0 !important;
+    gap: 8px !important;
+  }
+
+  .transit-name {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  .transit-time {
+    font-size: 10.5px !important;
+    padding: 2.5px 7px !important;
+  }
+
+  .location-map-frame > img {
+    max-height: 280px !important;
+  }
+
+  .location-leaflet-map {
+    height: 240px !important;
+    min-height: 220px !important;
+  }
+
+  .location-check-item {
+    font-size: 12px !important;
+    padding: 9px 12px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .transit-row {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
+  }
+
+  .transit-name {
+    flex: 1 1 100% !important;
+  }
+
+  .transit-time {
+    align-self: flex-start !important;
+    font-size: 10px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Map Mobile UX: Remove +/- Zoom buttons on mobile to avoid obscuring popup
+   ========================================================================== */
+@media (max-width: 768px) {
+  .leaflet-control-zoom,
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out,
+  .leaflet-top.leaflet-left,
+  .leaflet-top.leaflet-left .leaflet-control {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+}
+
+
+/* ==========================================================================
+   Video Lead Card: Keep "+91" strictly on ONE line without splitting
+   ========================================================================== */
+.video-lead-phone-field {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.video-lead-phone-field span,
+.video-lead-dial-code {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  min-width: fit-content !important;
+  padding: 0 12px 0 12px !important;
+  color: #e8c96a !important;
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.video-lead-phone-field input {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: auto !important;
+}
+
+@media (max-width: 640px) {
+  .video-lead-phone-field span,
+  .video-lead-dial-code {
+    padding: 0 8px 0 10px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 }

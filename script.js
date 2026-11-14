@@ -385,7 +385,11 @@
       locationMapInitialized = true;
 
       const location = [13.0452, 77.7455];
-      const map = window.L.map(locationMapElement, { scrollWheelZoom: false }).setView(location, 14);
+      const isMobileMap = window.innerWidth <= 768;
+      const map = window.L.map(locationMapElement, {
+        scrollWheelZoom: false,
+        zoomControl: !isMobileMap
+      }).setView(location, 14);
 
       window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
@@ -1662,7 +1666,7 @@
       // Contextual detection based on button role & placement
       if (btn.classList.contains("button-download-masterplan") || btn.closest(".masterplan-section")) {
         title = "Get The Full Master Plan";
-        subtitle = "The full master plan and tower allocation on WhatsApp within minutes.";
+        subtitle = "The complete master layout plan, unit pricing and tower details on WhatsApp within minutes.";
         submitText = "Download Master Plan";
         source = "Master Plan Download";
       } else if (btn.classList.contains("button-brochure-download") || btn.classList.contains("intro-pdf-download-btn") || btn.closest(".brochure-section")) {

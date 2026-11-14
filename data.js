@@ -264,21 +264,37 @@ window.sattvaData = {
   ],
   locationGroups: [
     {
-      category: "CONNECTIVITY",
+      category: "AIRPORT & ARTERIAL TRANSIT",
       icon: "nav",
       items: [
-        { name: "Cheemasandra Lake", timeDistance: "300 meters" },
-        { name: "Satellite Town Ring Road (STRR)", timeDistance: "Approx. 8-10 km" },
-        { name: "Kempegowda International Airport", timeDistance: "Approx. 30 km (45 mins)" }
+        { name: "Old Madras Road (NH-75) & Budigere Cross", timeDistance: "Immediate · 0 mins" },
+        { name: "Satellite Town Ring Road (STRR / NH-648)", timeDistance: "8 km · 10 mins" },
+        { name: "Whitefield Railway Station", timeDistance: "7.4 km · 10 mins" },
+        { name: "Kadugodi Tree Park Metro (Purple Line)", timeDistance: "9.0 km · 12 mins" },
+        { name: "KR Puram Hanging Bridge & Junction", timeDistance: "11 km · 15 mins" },
+        { name: "Kempegowda International Airport (via STRR)", timeDistance: "30 km · 40 mins" }
       ]
     },
     {
-      category: "WHY OMR IS A PRIME HUB",
+      category: "TECH PARKS & WORK HUBS",
       icon: "work",
       items: [
-        { name: "East Bengaluru Access", timeDistance: "Old Madras Road, Whitefield, KR Puram" },
-        { name: "Employment Hubs", timeDistance: "Proximity to ITPL & Whitefield tech parks" },
-        { name: "Emerging Growth Corridor", timeDistance: "Top-performing East Bengaluru node" }
+        { name: "International Tech Park Bengaluru (ITPL)", timeDistance: "9.5 km · 15 mins" },
+        { name: "EPIP Industrial Zone & GR Tech Park", timeDistance: "11 km · 18 mins" },
+        { name: "Hoskote Industrial & Auto Corridor", timeDistance: "8.5 km · 14 mins" },
+        { name: "Bhoruka & Bagmane World Technology Center", timeDistance: "14 km · 20 mins" },
+        { name: "Manyata Tech Park (via Outer Ring Road)", timeDistance: "22 km · 35 mins" }
+      ]
+    },
+    {
+      category: "HEALTHCARE, SCHOOLS & RETAIL",
+      icon: "health",
+      items: [
+        { name: "Cheemasandra Lake & Waterfront Promenade", timeDistance: "300 m · 2 mins" },
+        { name: "Manipal Hospital Whitefield", timeDistance: "10.5 km · 16 mins" },
+        { name: "Vydehi Institute of Medical Sciences", timeDistance: "11.2 km · 18 mins" },
+        { name: "Nexus Shantiniketan & Forum Neighbourhood Mall", timeDistance: "11 km · 18 mins" },
+        { name: "Delhi Public School & National Public School", timeDistance: "8 to 12 mins" }
       ]
     }
   ],
