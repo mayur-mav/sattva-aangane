@@ -1635,8 +1635,8 @@
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
         const playBtn = target.querySelector("#open-tour");
-        const video = target.querySelector("#virtualTourVideo");
-        if (video && video.paused && playBtn) {
+        const video = target.querySelector("#virtual-tour-video");
+        if (playBtn && (!video || video.paused)) {
           setTimeout(() => {
             playBtn.click();
           }, 600);
@@ -1662,12 +1662,12 @@
       // Contextual detection based on button role & placement
       if (btn.classList.contains("button-download-masterplan") || btn.closest(".masterplan-section")) {
         title = "Get The Full Master Plan";
-        subtitle = "The full master plan and row house numbering on WhatsApp within minutes.";
+        subtitle = "The full master plan and tower allocation on WhatsApp within minutes.";
         submitText = "Download Master Plan";
         source = "Master Plan Download";
       } else if (btn.classList.contains("button-brochure-download") || btn.classList.contains("intro-pdf-download-btn") || btn.closest(".brochure-section")) {
         title = "Download Official Brochure";
-        subtitle = "High-resolution architectural brochure by Hafeez Contractor on WhatsApp within minutes.";
+        subtitle = "High-resolution architectural brochure and project layout on WhatsApp within minutes.";
         submitText = "Download Brochure PDF";
         source = "Brochure Download";
       } else if (btn.classList.contains("button-get-price") || btn.closest(".pricing-table-row")) {

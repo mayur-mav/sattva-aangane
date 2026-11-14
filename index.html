@@ -31,10 +31,10 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20.0">
-    <script src="data.js?v=20.0" defer></script>
+    <link rel="stylesheet" href="styles.css?v=27.0">
+    <script src="data.js?v=27.0" defer></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="script.js?v=20.0" defer></script>
+    <script src="script.js?v=27.0" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -95,10 +95,10 @@
             </div>
 
             <h1 id="hero-title" class="hero-title">
-              Sattva Aangané<br>
-              Budigere Cross, OMR <span class="hero-pipe">|</span> <span class="hero-gold-text">Luxury<br>
-              Residences, Price &amp;<br>
-              Amenities</span>
+              <span class="hero-title-main">Sattva Aangané</span>
+              <span class="hero-title-sub">Budigere Cross, OMR</span>
+              <span class="hero-title-sep"><span class="hero-pipe">|</span></span>
+              <span class="hero-gold-text">Luxury Residences, Price &amp; Amenities</span>
             </h1>
 
             <p class="hero-description">
@@ -108,8 +108,10 @@
             <div class="hero-price-glass">
               <div class="price-glass-eyebrow">HOMES START FROM</div>
               <div class="price-glass-main">
-                <span class="price-val">₹2.66 Cr*</span>
-                <span class="price-dot-onwards">• Onwards</span>
+                <div class="price-glass-top">
+                  <span class="price-val">₹2.66 Cr*</span>
+                  <span class="price-dot-onwards">• Onwards</span>
+                </div>
                 <span class="price-config-note">3, 4 &amp; 5 BHK — 1,794 to 5,100+ sqft</span>
               </div>
             </div>
@@ -1213,7 +1215,7 @@
       </div>
     </div>
 
-    <div class="modal" id="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tour-title" hidden>
+    <div class="modal" id="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tour-title" style="display: none;" hidden>
       <div class="modal-backdrop" data-close-modal></div>
       <div class="modal-panel">
         <button class="modal-close" type="button" data-close-modal aria-label="Close video">×</button>
