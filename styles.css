@@ -396,13 +396,13 @@ section[id],
 .hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-image {
   object-fit: cover;
-  object-position: center 42%;
-  filter: brightness(1.28) contrast(1.06) saturate(1.12);
+  object-position: center 30%;
+  filter: brightness(1.22) contrast(1.04) saturate(1.12); display: block;
 }
 .hero-shade {
   background:
-    linear-gradient(90deg, rgba(16, 32, 56, 0.45) 0%, rgba(27, 54, 93, 0.22) 40%, rgba(27, 54, 93, 0.04) 68%, transparent 100%),
-    linear-gradient(180deg, rgba(16, 32, 56, 0.18) 0%, transparent 28%, transparent 78%, rgba(16, 32, 56, 0.28) 100%);
+    linear-gradient(90deg, rgba(16, 32, 56, 0.40) 0%, rgba(16, 32, 56, 0.16) 35%, rgba(16, 32, 56, 0.02) 65%, transparent 100%),
+    linear-gradient(180deg, rgba(16, 32, 56, 0.12) 0%, transparent 25%, transparent 75%, rgba(16, 32, 56, 0.22) 100%);
 }
 .hero-content {
   position: relative;
@@ -5954,7 +5954,7 @@ figcaption#gallery-caption {
   }
   .hero-shade {
     background:
-      linear-gradient(180deg, rgba(16, 32, 56, 0.46) 0%, rgba(27, 54, 93, 0.20) 45%, rgba(16, 32, 56, 0.42) 100%);
+      linear-gradient(180deg, rgba(16, 32, 56, 0.35) 0%, rgba(16, 32, 56, 0.10) 38%, rgba(16, 32, 56, 0.32) 100%);
   }
   .hero-content {
     display: flex !important;

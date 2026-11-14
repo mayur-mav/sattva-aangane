@@ -131,7 +131,7 @@ window.sattvaData = {
       saleable: "1,796 sq. ft.",
       carpet: "1,115 sq. ft.",
       price: "₹2.81 Cr (Launch Pad: ₹2.69 Cr*)",
-      image: "",
+      image: "assets/3bhk-floor-plan.webp",
       bullets: [
         "1,796 sq. ft. super built-up area",
         "3.3-metre floor-to-ceiling height",
@@ -146,7 +146,7 @@ window.sattvaData = {
       saleable: "2,311 sq. ft.",
       carpet: "1,284 sq. ft.",
       price: "₹3.57 Cr (Launch Pad: ₹3.37 Cr*)",
-      image: "",
+      image: "assets/3bhk-2311-floor-plan.webp",
       bullets: [
         "2,311 sq. ft. super built-up area",
         "236 sq. ft. of balcony space",
@@ -161,7 +161,7 @@ window.sattvaData = {
       saleable: "2,695 sq. ft.",
       carpet: "1,640 sq. ft.",
       price: "₹4.11 Cr (Launch Pad: ₹3.89 Cr*)",
-      image: "",
+      image: "assets/4bhk-floor-plan.webp",
       bullets: [
         "2,695 sq. ft. super built-up area",
         "Dedicated maid room",
@@ -176,7 +176,7 @@ window.sattvaData = {
       saleable: "2,991 sq. ft.",
       carpet: "1,793 sq. ft.",
       price: "₹4.59 Cr (Launch Pad: ₹4.34 Cr*)",
-      image: "",
+      image: "assets/4bhk-2991-floor-plan.webp",
       bullets: [
         "2,991 sq. ft. super built-up area",
         "187 sq. ft. of balcony space",
@@ -191,7 +191,7 @@ window.sattvaData = {
       saleable: "5,150 sq. ft.",
       carpet: "3,091 sq. ft.",
       price: "Price on Request (Approx. ₹6.88 Cr - ₹8.24 Cr*)",
-      image: "",
+      image: "assets/4bhk-duplex-floor-plan.webp",
       bullets: [
         "5,150 sq. ft. signature duplex layout",
         "352 sq. ft. of balcony space",
@@ -204,8 +204,8 @@ window.sattvaData = {
       name: "3 BHK Residences",
       label: "1,800 to 2,300 sq. ft.",
       description: "Thoughtfully crafted 3 BHK homes (1,800 - 2,300 sq. ft.) featuring expansive open layouts, 3.3m ceiling heights, and four-sided ventilation.",
-      image: "",
-      imageAlt: "Sattva Aangane 3 BHK residences",
+      image: "assets/bedroom.webp",
+      imageAlt: "Sattva Aangane luxury 3 BHK bedroom suite with private deck",
       size: "1,800 to 2,300 sq. ft.",
       tag: "3 BHK"
     },
@@ -213,13 +213,27 @@ window.sattvaData = {
       name: "4 BHK & Signature Duplexes",
       label: "2,600 to 5,150 sq. ft.",
       description: "Palatial 4 BHK Suites (2,600 - 3,000 sq. ft.) and Signature Duplexes (4,300 - 5,150 sq. ft.) offering unparalleled privacy and zero shared walls.",
-      image: "",
-      imageAlt: "Palatial 4 BHK and Duplex residences at Sattva Aangane",
+      image: "assets/Interior-view.webp",
+      imageAlt: "Palatial double-height living room and dining suite at Sattva Aangane",
       size: "2,600 to 5,150 sq. ft.",
       tag: "4 BHK & Duplex"
     }
   ],
-  amenitySlides: [],
+  overviewShowcase: [
+    { src: "assets/exterior-view.webp", alt: "Sattva Aangane 7 iconic high-rise towers", caption: "7 iconic towers rising up to 42 floors across 10.2 acres" },
+    { src: "assets/lakeside-landscape.webp", alt: "Lakeside courtyard greenery", caption: "80% open spaces overlooking pristine Cheemasandra Lake" },
+    { src: "assets/canopy-skywalk.webp", alt: "Elevated canopy skywalk", caption: "2.5-acre open park with an elevated canopy skywalk" },
+    { src: "assets/sky-deck-clubhouse.webp", alt: "45,355 sqft Grand Clubhouse", caption: "Multi-level 45,355 sq. ft. clubhouse with indoor pool" },
+    { src: "assets/community.webp", alt: "Lakeside luxury enclave", caption: "Biophilic architectural living, 300 meters from Cheemasandra Lake" }
+  ],
+  amenitySlides: [
+    { src: "assets/sky-deck-clubhouse.webp", title: "45,355 Sq. Ft. Multi-Level Clubhouse", alt: "45,355 sqft Clubhouse", caption: "Featuring temperature-controlled indoor pool, squash, badminton courts, and fitness suites" },
+    { src: "assets/canopy-skywalk.webp", title: "Canopy Skywalk & Courtyard Greens", alt: "Canopy skywalk", caption: "Elevated walkway weaving through 80% lush green landscaping" },
+    { src: "assets/lakeside-landscape.webp", title: "Cheemasandra Lakefront Greens", alt: "Lakeside landscape", caption: "Lakeside serenity located just 300 meters from Cheemasandra Lake" },
+    { src: "assets/lakeside-walkway.webp", title: "Lakefront Promenade & Jogging Track", alt: "Lakefront walkway", caption: "Dedicated morning walk and cycling tracks along open green buffer" },
+    { src: "assets/dedicated-lifts.webp", title: "Private Lobbies & Low Density", alt: "Private lobbies", caption: "Just 4 homes per floor with 3 passenger lifts and 1 service lift" },
+    { src: "assets/stepped-tower.webp", title: "Iconic Stepped Tower Architecture", alt: "Stepped tower", caption: "Four-sided ventilation with no shared walls between residences" }
+  ],
   amenityGroups: [
     {
       category: "INDOOR AMENITIES",
@@ -237,7 +251,17 @@ window.sattvaData = {
       pills: ["Rooftop Lounges in Every Tower", "Gym & Yoga Terrace", "Open to Sky Seating / Party Area", "Function Area", "Steam Room"]
     }
   ],
-  projectGallery: [],
+  projectGallery: [
+    { src: "assets/exterior-view.webp", tag: "ELEVATION", alt: "Sattva Aangane 7 iconic high-rise towers", credit: "ARCHITECTURAL RENDERING" },
+    { src: "assets/Interior-view.webp", tag: "INTERIORS", alt: "Double-height living space with four-sided ventilation", credit: "INTERIOR RENDERING" },
+    { src: "assets/bedroom.webp", tag: "MASTER SUITE", alt: "Expansive master bedroom with private deck", credit: "ARTIST'S IMPRESSION" },
+    { src: "assets/sky-deck-clubhouse.webp", tag: "CLUBHOUSE", alt: "45,355 sqft clubhouse and rooftop lounges", credit: "AMENITY SHOWCASE" },
+    { src: "assets/canopy-skywalk.webp", tag: "LANDSCAPE", alt: "Elevated canopy skywalk and courtyard greenery", credit: "LANDSCAPE BLUEPRINT" },
+    { src: "assets/lakeside-landscape.webp", tag: "LAKESIDE", alt: "Courtyard greens facing Cheemasandra Lake", credit: "ARTIST'S IMPRESSION" },
+    { src: "assets/lift-lobby.webp", tag: "LIFT LOBBY", alt: "Private designer lift lobby with marble flooring", credit: "SPECIFICATION SHOWCASE" },
+    { src: "assets/stepped-tower.webp", tag: "ARCHITECTURE", alt: "Iconic stepped architectural profile up to 42 floors", credit: "TOWER BLUEPRINT" },
+    { src: "assets/connectivity-map.webp", tag: "CONNECTIVITY", alt: "Old Madras Road connectivity map", credit: "LOCATION BLUEPRINT" }
+  ],
   locationGroups: [
     {
       category: "CONNECTIVITY",
