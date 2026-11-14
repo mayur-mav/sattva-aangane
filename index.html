@@ -31,10 +31,10 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=28.0">
-    <script src="data.js?v=28.0" defer></script>
+    <link rel="stylesheet" href="styles.css?v=30.0">
+    <script src="data.js?v=30.0" defer></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="script.js?v=28.0" defer></script>
+    <script src="script.js?v=30.0" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -670,7 +670,6 @@
           <div class="virtual-tour-frame video-container reveal" id="tour-frame">
             <video class="virtual-tour-video" id="virtual-tour-video" playsinline disablepictureinpicture preload="none" poster="assets/exterior-view.webp" draggable="false">
               <source data-src="assets/property-tour.mp4" type="video/mp4">
-              <track kind="captions" src="assets/property-tour.en.vtt" srclang="en" label="English" default>
               Your browser does not support HTML5 video playback.
             </video>
             <div class="virtual-tour-overlay" id="tour-overlay"></div>
@@ -1212,21 +1211,6 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="modal" id="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tour-title" style="display: none;" hidden>
-      <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-panel">
-        <button class="modal-close" type="button" data-close-modal aria-label="Close video">×</button>
-        <p class="eyebrow">A glimpse of lakeside luxury</p>
-        <h2 id="tour-title">The Sattva Aangané lifestyle film</h2>
-        <video id="tour-video" controls preload="none" poster="assets/exterior-view.webp" draggable="false">
-          <source src="assets/property-tour.mp4" type="video/mp4">
-          <track kind="captions" src="assets/property-tour.en.vtt" srclang="en" label="English" default>
-          Your browser does not support embedded video.
-        </video>
-        <p class="video-note">Illustrative architectural and lifestyle preview.</p>
       </div>
     </div>
 

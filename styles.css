@@ -8421,3 +8421,113 @@ h1, h2, h3, h4, h5, h6, p, span, a, label, button,
   color: #c2410c !important;
   font-weight: 800 !important;
 }
+
+
+/* Strict [hidden] enforcement */
+[hidden],
+.modal[hidden],
+.enquiry-popup-modal[hidden],
+#tour-modal[hidden],
+.video-lead-card[hidden],
+.video-controls[hidden] {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   Hero Visual Polish: High-Contrast Luxury Typography & Scrim (Champagne Gold & Crisp White)
+   ========================================================================== */
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(10, 20, 36, 0.72) 0%, rgba(10, 20, 36, 0.45) 38%, rgba(10, 20, 36, 0.06) 65%, transparent 100%),
+    linear-gradient(180deg, rgba(10, 20, 36, 0.25) 0%, transparent 22%, transparent 75%, rgba(10, 20, 36, 0.35) 100%) !important;
+}
+
+.hero-title {
+  margin: 0 0 16px !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(34px, 4vw, 50px) !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(10, 20, 36, 0.85) !important;
+}
+
+.hero-title-main {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 14px rgba(10, 20, 36, 0.85) !important;
+}
+
+.hero-title-sub {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 400 !important;
+  text-shadow: 0 2px 12px rgba(10, 20, 36, 0.85) !important;
+}
+
+.hero-pipe {
+  color: rgba(232, 211, 162, 0.7) !important;
+  font-weight: 300 !important;
+  margin: 0 6px !important;
+}
+
+/* Warm Champagne Gold accent — blends harmoniously with green landscape without color clash */
+.hero-gold-text {
+  color: #e8d3a2 !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 12px rgba(10, 20, 36, 0.9) !important;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 12px rgba(10, 20, 36, 0.8) !important;
+}
+
+.hero-launch-pill {
+  background: rgba(16, 32, 56, 0.88) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(232, 211, 162, 0.45) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 16px rgba(10, 20, 36, 0.4) !important;
+  color: #e8d3a2 !important;
+}
+
+.pill-dot {
+  color: #e8d3a2 !important;
+}
+
+.hero-price-glass {
+  background: rgba(16, 32, 56, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(232, 211, 162, 0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 30px rgba(10, 20, 36, 0.45) !important;
+}
+
+.price-glass-eyebrow {
+  color: #e8d3a2 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+}
+
+.price-val {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.price-dot-onwards,
+.price-config-note {
+  color: #e8d3a2 !important;
+}
+
+@media (max-width: 760px) {
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(10, 20, 36, 0.58) 0%, rgba(10, 20, 36, 0.28) 40%, rgba(10, 20, 36, 0.52) 100%) !important;
+  }
+}
