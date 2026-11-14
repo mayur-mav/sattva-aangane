@@ -78,8 +78,8 @@ window.sattvaData = {
       plot: "High-Rise Tower",
       carpet: "1,115 sq. ft.",
       area: "1,796 sq. ft.",
-      starting: "₹2.81 Cr (Launch Pad: ₹2.69 Cr*)",
-      subLabel: "STARTING PRICE"
+      starting: "₹2.81 Cr",
+      subLabel: "PRICE"
     },
     {
       brand: "SATTVA AANGANÉ",
@@ -88,8 +88,8 @@ window.sattvaData = {
       plot: "High-Rise Tower",
       carpet: "1,284 sq. ft.",
       area: "2,311 sq. ft.",
-      starting: "₹3.57 Cr (Launch Pad: ₹3.37 Cr*)",
-      subLabel: "PRICE RANGE"
+      starting: "₹3.57 Cr",
+      subLabel: "PRICE"
     },
     {
       brand: "SATTVA AANGANÉ",
@@ -98,8 +98,8 @@ window.sattvaData = {
       plot: "High-Rise Tower",
       carpet: "1,640 sq. ft.",
       area: "2,695 sq. ft.",
-      starting: "₹4.11 Cr (Launch Pad: ₹3.89 Cr*)",
-      subLabel: "PRICE RANGE"
+      starting: "₹4.11 Cr",
+      subLabel: "PRICE"
     },
     {
       brand: "SATTVA AANGANÉ",
@@ -108,8 +108,8 @@ window.sattvaData = {
       plot: "High-Rise Tower",
       carpet: "1,793 sq. ft.",
       area: "2,991 sq. ft.",
-      starting: "₹4.32 Cr (Launch Pad: ₹4.09 Cr*)",
-      subLabel: "PRICE RANGE"
+      starting: "₹4.32 Cr",
+      subLabel: "PRICE"
     },
     {
       brand: "SATTVA AANGANÉ",
@@ -119,7 +119,7 @@ window.sattvaData = {
       carpet: "3,091 sq. ft.",
       area: "5,150 sq. ft.",
       starting: "₹6.88 Cr - ₹8.24 Cr*",
-      subLabel: "EXECUTIVE SUITE"
+      subLabel: "PRICE"
     }
   ],
   floorPlans: [
@@ -130,7 +130,7 @@ window.sattvaData = {
       description: "A meticulously designed three-bedroom residence featuring four-sided ventilation and no shared walls.",
       saleable: "1,796 sq. ft.",
       carpet: "1,115 sq. ft.",
-      price: "₹2.81 Cr (Launch Pad: ₹2.69 Cr*)",
+      price: "₹2.81 Cr",
       image: "assets/3bhk-floor-plan.webp",
       bullets: [
         "1,796 sq. ft. super built-up area",
@@ -145,7 +145,7 @@ window.sattvaData = {
       description: "An expansive 3-bedroom home equipped with large living spaces, offering 1,284 sq. ft. of carpet area and a generous 236 sq. ft. balcony.",
       saleable: "2,311 sq. ft.",
       carpet: "1,284 sq. ft.",
-      price: "₹3.57 Cr (Launch Pad: ₹3.37 Cr*)",
+      price: "₹3.57 Cr",
       image: "assets/3bhk-2311-floor-plan.webp",
       bullets: [
         "2,311 sq. ft. super built-up area",
@@ -160,7 +160,7 @@ window.sattvaData = {
       description: "Four palatial bedrooms with a dedicated maid room, featuring zero shared walls and complete privacy.",
       saleable: "2,695 sq. ft.",
       carpet: "1,640 sq. ft.",
-      price: "₹4.11 Cr (Launch Pad: ₹3.89 Cr*)",
+      price: "₹4.11 Cr",
       image: "assets/4bhk-floor-plan.webp",
       bullets: [
         "2,695 sq. ft. super built-up area",
@@ -175,7 +175,7 @@ window.sattvaData = {
       description: "The pinnacle of high-rise luxury: 2,991 sq. ft. featuring 4 opulent bedrooms, staff quarters, and 1,793 sq. ft. of pure carpet area.",
       saleable: "2,991 sq. ft.",
       carpet: "1,793 sq. ft.",
-      price: "₹4.59 Cr (Launch Pad: ₹4.34 Cr*)",
+      price: "₹4.59 Cr",
       image: "assets/4bhk-2991-floor-plan.webp",
       bullets: [
         "2,991 sq. ft. super built-up area",
@@ -366,6 +366,14 @@ window.sattvaData = {
     {
       category: "ACOUSTICS & GREENERY",
       text: "Vertical gardens integrated across multiple levels, highway buffer zones, and acoustic planning for reduced noise."
+    },
+    {
+      category: "PREMIUM INTERIORS & FINISHES",
+      text: "Vaastu-compliant layouts featuring 8-foot teak wood main doors, high-grade vitrified and laminated flooring, and modular kitchen provisions with RO points."
+    },
+    {
+      category: "SAFETY & ECO-FRIENDLY INFRASTRUCTURE",
+      text: "Seismic Zone II RCC structures with shear wall technology, 24/7 CCTV security, solar-powered lighting, and rainwater harvesting systems."
     }
   ],
   developer: {
@@ -382,36 +390,64 @@ window.sattvaData = {
   },
   faqs: [
     {
-      question: "What is Sattva Aangané (Code name: Courtyard)?",
-      answer: "Sattva Aangané is an expansive luxury residential project by Sattva Group located on Old Madras Road. Set across 10.2 acres with 80% open spaces, it is situated just 300 meters from Cheemasandra Lake."
+      question: "Where is the project located?",
+      answer: "The project is strategically located next to Cheemasandra lake at Budigere cross, providing residents a peaceful environment near the lake with easy access to important places in Bengaluru."
     },
     {
-      question: "How many apartments are there and what are the sizes?",
-      answer: "The project features 977 thoughtfully designed residences. It offers 3 BHK (1,800 - 2,300 sq. ft.), 4 BHK (2,600 - 3,000 sq. ft.), and Signature Duplexes (4,200 - 5,400 sq. ft.)."
+      question: "What is the total land area of the project?",
+      answer: "The project covers an expansive area of 10.37 acres, masterfully designed to provide space for luxury housing, landscaping, recreational facilities, and open spaces."
     },
     {
-      question: "What is the starting price at Sattva Aangané?",
-      answer: "Prices start from ₹2.81 Crore, but a special Launch Pad Pricing starting at ₹2.69 Crore is available for the first 75 customers."
+      question: "How many residential towers are included in the project?",
+      answer: "Seven iconic tower residences have been built, ranging from G+29 to G+42 floors to form an inspiring modern-day skyline."
     },
     {
-      question: "What makes the apartments unique?",
-      answer: "Homes feature premium 3.3-metre floor-to-ceiling heights, four-sided ventilation, and absolutely no shared walls. There are only 4 apartments per floor serviced by 3 passenger lifts and 1 service lift."
+      question: "How many residential units are available in the development?",
+      answer: "The development project consists of 997 carefully planned homes, providing an exceptional place to live with carefully selected design and modern lifestyle facilities."
     },
     {
-      question: "What amenities are available?",
-      answer: "The project boasts a 45,355 sq. ft. clubhouse across three levels, rooftop lounges in every tower, a temperature-controlled indoor pool, 25m lap pool, and vertical gardens integrated across multiple levels."
+      question: "What apartment configurations are available in the project?",
+      answer: "The residential range includes luxurious 3 and 4 BHK apartments along with unique duplex homes that suit various tastes in urban life."
     },
     {
-      question: "How tall are the towers?",
-      answer: "The project consists of 7 iconic towers scaling from 4B+G+30 up to 42 floors."
+      question: "What makes the architectural design distinctive?",
+      answer: "This construction takes into account biophilic architecture and uses elements such as green walls, ecological landscapes, and natural ventilation for creating harmony with nature."
     },
     {
-      question: "How is the connectivity?",
-      answer: "Located on NH 75 (Old Madras Road), the project provides convenient access to Whitefield, KR Puram, the upcoming STRR (8-10 km away), and Kempegowda International Airport (~30 km/45 mins)."
+      question: "What is the floor-to-ceiling height provided in the apartments?",
+      answer: "Every apartment has an amazing ceiling height of 3.3 meters, which provides spatial spaciousness, light, and an ambient environment."
     },
     {
-      question: "When is the expected completion date?",
-      answer: "The project is expected to be completed by October 2032."
+      question: "What is the significance of four-sided ventilation?",
+      answer: "These structures have been designed to allow four-sided ventilation without any shared walls, allowing for improved air circulation and privacy."
+    },
+    {
+      question: "How much open space is available within the project?",
+      answer: "The development has been designed in such a way that about 80 percent of it consists of open space areas."
+    },
+    {
+      question: "What is the clubhouse area of the development?",
+      answer: "This project includes an expansive 45,000-square feet clubhouse divided into three floors, which provides residents with a large area to enjoy recreational and leisure activities."
+    },
+    {
+      question: "What sustainable architectural features are incorporated into the project?",
+      answer: "It involves the use of vertical landscaping, ecological regeneration, ventilation and day lighting, and topography-based planning for environmentally friendly housing."
+    },
+    {
+      question: "How accessible is Whitefield from the project location?",
+      answer: "Whitefield connectivity offers convenient access to established IT parks, commercial establishments, employment centres, and lifestyle destinations across Bengaluru's eastern growth corridor."
+    },
+    {
+      question: "What is the importance of the restored ecological landscape?",
+      answer: "The renovated ecosystem landscape focuses on being environmentally sensitive, maintains the natural essence, and creates green surroundings for better residential experience."
+    },
+    {
+      question: "What are the major location advantages of the project?",
+      answer: "Its strategic Budigere Cross location provides convenient access to Old Madras Road, Whitefield, established business districts, educational institutions, and essential healthcare facilities."
+    },
+    {
+      question: "What makes this development different from conventional residential projects?",
+      answer: "Its combination of lakeside surroundings, biophilic architecture, expansive open spaces, exclusive residences, and future-focused sustainability creates a distinctive luxury living experience."
     }
   ]
 };
