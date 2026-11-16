@@ -1,9 +1,9 @@
 window.sattvaData = {
   // ==========================================================================
-  // Lead Capture API Endpoint (paste your API URL here when ready)
-  // e.g. leadApiUrl: "https://your-backend.com/api/leads",
+  // Lead Capture API Endpoint & Project Configuration
   // ==========================================================================
-  leadApiUrl: "",
+  leadApiUrl: "https://leadapi.homebble.in/formdataRoute/getFormdata",
+  projectName: "Sattva Aangané",
 
   tagline: "FRAMED BY NATURE",
   subTagline: "Expansive Luxury Living on Old Madras Road, Bengaluru",
