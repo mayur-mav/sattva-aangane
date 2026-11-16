@@ -1561,7 +1561,17 @@
       const configStr = String(config).trim();
       let matchOpt = null;
 
-      if (/4\s*bhk\s*grande/i.test(configStr)) {
+      if (/duplex|sky\s*villa/i.test(configStr)) {
+        matchOpt = Array.from(popupConfigSelect.options).find((o) => /duplex/i.test(o.value) || /duplex/i.test(o.textContent));
+      } else if (/signature/i.test(configStr)) {
+        matchOpt = Array.from(popupConfigSelect.options).find((o) => /signature/i.test(o.value) || /signature/i.test(o.textContent));
+      } else if (/royal/i.test(configStr)) {
+        matchOpt = Array.from(popupConfigSelect.options).find((o) => /royal/i.test(o.value) || /royal/i.test(o.textContent));
+      } else if (/premium/i.test(configStr)) {
+        matchOpt = Array.from(popupConfigSelect.options).find((o) => /premium/i.test(o.value) || /premium/i.test(o.textContent));
+      } else if (/luxury/i.test(configStr)) {
+        matchOpt = Array.from(popupConfigSelect.options).find((o) => /luxury/i.test(o.value) || /luxury/i.test(o.textContent));
+      } else if (/4\s*bhk\s*grande/i.test(configStr)) {
         matchOpt = Array.from(popupConfigSelect.options).find((o) => /grande/i.test(o.value) || /grande/i.test(o.textContent));
       } else if (/4\s*bhk\s*luxe/i.test(configStr)) {
         matchOpt = Array.from(popupConfigSelect.options).find((o) => /luxe/i.test(o.value) || /luxe/i.test(o.textContent));
