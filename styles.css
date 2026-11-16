@@ -422,6 +422,7 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-pipe { color: #ea580c; font-weight: 300; margin: 0 4px; }
 .hero-gold-text { color: #ea580c; }
 .hero-description { max-width: 530px; margin-bottom: 18px; color: #ffffff; font-size: 14.5px; line-height: 1.7; text-shadow: 0 1px 10px rgba(16, 32, 56, 0.55); }
+.desc-mobile { display: none; }
 .hero-price-glass { background: rgba(27, 54, 93, 0.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1.5px solid rgba(234, 88, 12, 0.45); border-radius: 12px; padding: 14px 20px; margin-bottom: 18px; max-width: 540px; box-shadow: 0 8px 30px rgba(16, 32, 56, 0.35); }
 .price-glass-eyebrow { font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em; color: #fb923c; text-transform: uppercase; margin-bottom: 4px; }
 .price-glass-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 10px; }
@@ -5761,7 +5762,7 @@ figcaption#gallery-caption {
   .visit-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   .approval-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
 }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   section[id],
   .section[id],
   [id="faq"],
@@ -5967,7 +5968,7 @@ figcaption#gallery-caption {
     padding-inline: 14px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    gap: 16px !important;
+    gap: 14px !important;
     overflow: hidden !important;
   }
   .hero-copy {
@@ -6044,12 +6045,12 @@ figcaption#gallery-caption {
     width: 100% !important;
   }
   .hero-description {
-    font-size: clamp(12.5px, 3.6vw, 13.5px) !important;
-    line-height: 1.55 !important;
-    margin-bottom: 14px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
     color: rgba(255, 255, 255, 0.92) !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 440px !important;
     min-width: 0 !important;
     box-sizing: border-box !important;
     text-align: center !important;
@@ -6058,13 +6059,15 @@ figcaption#gallery-caption {
     word-break: normal !important;
     overflow-wrap: break-word !important;
   }
+  .desc-desktop { display: none !important; }
+  .desc-mobile { display: inline !important; }
   .hero-price-glass {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
     box-sizing: border-box !important;
     padding: 12px 14px !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 0 !important;
     margin-inline: auto !important;
     text-align: center !important;
   }
@@ -6104,41 +6107,16 @@ figcaption#gallery-caption {
     word-break: normal !important;
     text-align: center !important;
   }
-  /* Never truncate badges on mobile - full width clean pills */
+  /* Mobile: Hide the pill-shaped feature list so the lead form shifts up */
   .hero-badges {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 7px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    margin-bottom: 14px !important;
-    align-items: stretch !important;
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
   .badge-pill {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    padding: 8px 12px !important;
-    font-size: 11.5px !important;
-    border-radius: 8px !important;
-    background: rgba(27, 54, 93, 0.75) !important;
-    border: 1px solid rgba(234, 88, 12, 0.35) !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-  .badge-pill span {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    line-height: 1.35 !important;
-    font-weight: 500 !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
+    display: none !important;
   }
   .hero-brochure-btn { display: none !important; }
   .hero-credit-line { display: none !important; }
@@ -6147,7 +6125,7 @@ figcaption#gallery-caption {
     max-width: 100% !important;
     min-width: 0 !important;
     box-sizing: border-box !important;
-    margin-top: 6px !important;
+    margin-top: 0 !important;
     margin-inline: auto !important;
     padding: 20px 16px 16px !important;
     border-radius: 14px !important;
@@ -7263,7 +7241,7 @@ figcaption#gallery-caption {
     padding-bottom: 0 !important;
   }
 }
-@media (min-width: 761px) and (max-width: 1040px) {
+@media (min-width: 769px) and (max-width: 1040px) {
   .floorplan-showcase-panel { grid-template-columns: 1fr !important; }
   .floorplan-stage-card { height: auto; }
   .floorplan-single-wrap { min-height: 340px; }
@@ -7357,7 +7335,7 @@ figcaption#gallery-caption {
 }
 
 /* Tablet Responsive Navigation (Clean alignment from 761px to 1040px) */
-@media (min-width: 761px) and (max-width: 1040px) {
+@media (min-width: 769px) and (max-width: 1040px) {
   .site-header {
     top: 14px !important;
   }
@@ -7657,7 +7635,7 @@ figcaption#gallery-caption {
   }
 }
 
-@media (min-width: 761px) and (max-width: 880px) {
+@media (min-width: 769px) and (max-width: 880px) {
   .primary-nav {
     gap: 8px !important;
   }
