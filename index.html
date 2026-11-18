@@ -31,10 +31,10 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=38.5">
-    <script src="data.js?v=38.5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=38.6">
+    <script src="data.js?v=38.6" defer></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="script.js?v=38.5" defer></script>
+    <script src="script.js?v=38.6" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -186,11 +186,11 @@
               <label class="form-label" for="hero-home">LOOKING FOR</label>
               <div class="custom-select-wrap">
                 <select id="hero-home" name="homeType" class="full-select">
-                  <option value="3 BHK Luxury (1,794 sqft · ₹2.66 - 2.85 Cr*)">3 BHK Luxury — 1,794 sqft (₹2.66 - 2.85 Cr*)</option>
-                  <option value="3 BHK Premium + Maid (2,350 sqft · ₹3.15 - 3.45 Cr*)" selected>3 BHK Premium + Maid — 2,350 sqft (₹3.15 - 3.45 Cr*)</option>
-                  <option value="4 BHK Royal Suite (2,950 sqft · ₹3.95 - 4.30 Cr*)">4 BHK Royal Suite — 2,950 sqft (₹3.95 - 4.30 Cr*)</option>
-                  <option value="4 BHK Signature + Maid (3,750 sqft · ₹4.80 - 5.25 Cr*)">4 BHK Signature + Maid — 3,750 sqft (₹4.80 - 5.25 Cr*)</option>
-                  <option value="5 BHK Duplex Sky Villa (5,000+ sqft · Price on Request)">5 BHK Duplex Sky Villa — 5,000+ sqft (Price on Request)</option>
+                  <option value="3 BHK Luxury">3 BHK Luxury</option>
+                  <option value="3 BHK Signature + 3T" selected>3 BHK Signature + 3T</option>
+                  <option value="4 BHK Royal Suite">4 BHK Royal Suite</option>
+                  <option value="4 BHK Signature">4 BHK Signature</option>
+                  <option value="Signature Duplex">Signature Duplex</option>
                 </select>
               </div>
             </div>
@@ -312,7 +312,8 @@
                   <span class="specs-header-title">KEY PROJECT SPECIFICATIONS</span>
                   <span class="specs-header-badge">RERA REGISTERED</span>
                 </div>
-                <div class="spec-row">
+                <div id="project-specs-rows">
+                  <div class="spec-row">
                   <div class="spec-label">PROJECT</div>
                   <div class="spec-value">Sattva Aangané, Old Madras Road (NH-75), near Budigere Cross, Aavalahalli, East Bengaluru 560049</div>
                 </div>
@@ -349,7 +350,8 @@
                     <span>Official Registration: PRM/KA/RERA/1251/446/PR/180926/008944</span>
                   </div>
                 </div>
-                <div class="intro-chateau-badges">
+                </div>
+<div class="intro-chateau-badges" id="project-spec-badges">
                   <h3 class="intro-highlights-heading">PROJECT HIGHLIGHTS</h3>
                   <span class="intro-badge">&#10022; ~10-Acre Lakeside Enclave</span>
                   <span class="intro-badge">&#10022; 80%+ Open Landscaped Greens</span>
@@ -499,7 +501,7 @@
             <div class="section-kicker"><span>— INVESTMENT &amp; PRICING —</span></div>
             <h2 class="pricing-heading-title">Sattva Aangané <em>Price List</em></h2>
             <p class="pricing-lead-text">
-              3 BHK Luxury (1,794 sqft): &#8377;2.66 - 2.85 Cr* &middot; 3 BHK Premium + Maid (2,350 sqft): &#8377;3.15 - 3.45 Cr* &middot; 4 BHK Royal Suite (2,950 sqft): &#8377;3.95 - 4.30 Cr* &middot; 4 BHK Signature + Maid (3,750 sqft): &#8377;4.80 - 5.25 Cr* &middot; 5 BHK Duplex Sky Villa (5,000+ sqft): Price on Request. Connect now for exclusive launch payment schedules.
+              Explore five luxury high-rise configurations with tailored payment schedules and launch benefits. Configuration-wise pricing depends on floor band, tower orientation (lake-facing vs courtyard-facing) and car parking allotment and is shared on request. Unlock the official price sheet and launch availability below.
             </p>
           </div>
 
@@ -609,7 +611,7 @@
             <div class="section-kicker"><span>— RESIDENCES —</span></div>
             <h2 class="floorplans-heading-title">Floor Plans &amp;<br class="mobile-br"><em>Unit Sizes</em></h2>
             <p class="floorplans-lead-text">
-              Five luxury high-rise configurations, taken from the developer's official unit plan set: 3 BHK Luxury (1,794 sq ft), 3 BHK Premium + Maid (2,350 sq ft), 4 BHK Royal Suite (2,950 sq ft), 4 BHK Signature + Maid (3,750 sq ft), and 5 BHK Duplex Sky Villa (5,000+ sq ft). Figures are saleable areas; RERA carpet area is shown alongside.
+              Five distinct high-rise luxury configurations, all taken from the developer's official unit plan set: 3 BHK Luxury (1,794 sqft), 3 BHK Signature + 3T (2,350 sqft), 4 BHK Royal Suite (2,950 sqft), 4 BHK Signature + Maid (3,750 sqft), and 5 BHK Duplex Sky Villa (5,000+ sqft). Unlock each configuration below to view detailed architectural drawings, carpet breakup and unit dimensions.
             </p>
           </div>
 
@@ -815,11 +817,11 @@
                 <label class="visit-label" for="visit-config">LOOKING FOR</label>
                 <div class="visit-select-box">
                   <select class="visit-select" id="visit-config" name="homeType">
-                    <option value="3 BHK Luxury (1,794 sqft · ₹2.66 - 2.85 Cr*)">3 BHK Luxury — 1,794 sqft (₹2.66 - 2.85 Cr*)</option>
-                    <option value="3 BHK Premium + Maid (2,350 sqft · ₹3.15 - 3.45 Cr*)" selected>3 BHK Premium + Maid — 2,350 sqft (₹3.15 - 3.45 Cr*)</option>
-                    <option value="4 BHK Royal Suite (2,950 sqft · ₹3.95 - 4.30 Cr*)">4 BHK Royal Suite — 2,950 sqft (₹3.95 - 4.30 Cr*)</option>
-                    <option value="4 BHK Signature + Maid (3,750 sqft · ₹4.80 - 5.25 Cr*)">4 BHK Signature + Maid — 3,750 sqft (₹4.80 - 5.25 Cr*)</option>
-                    <option value="5 BHK Duplex Sky Villa (5,000+ sqft · Price on Request)">5 BHK Duplex Sky Villa — 5,000+ sqft (Price on Request)</option>
+                    <option value="3 BHK Luxury">3 BHK Luxury</option>
+                    <option value="3 BHK Signature + 3T" selected>3 BHK Signature + 3T</option>
+                    <option value="4 BHK Royal Suite">4 BHK Royal Suite</option>
+                    <option value="4 BHK Signature">4 BHK Signature</option>
+                    <option value="Signature Duplex">Signature Duplex</option>
                   </select>
                 </div>
               </div>
@@ -1081,11 +1083,11 @@
             <label class="popup-label" for="popup-config">LOOKING FOR</label>
             <div class="popup-select-box">
               <select class="popup-select" id="popup-config" name="homeType">
-                <option value="3 BHK Luxury (1,794 sqft · ₹2.66 - 2.85 Cr*)">3 BHK Luxury — 1,794 sqft (₹2.66 - 2.85 Cr*)</option>
-                <option value="3 BHK Premium + Maid (2,350 sqft · ₹3.15 - 3.45 Cr*)" selected>3 BHK Premium + Maid — 2,350 sqft (₹3.15 - 3.45 Cr*)</option>
-                <option value="4 BHK Royal Suite (2,950 sqft · ₹3.95 - 4.30 Cr*)">4 BHK Royal Suite — 2,950 sqft (₹3.95 - 4.30 Cr*)</option>
-                <option value="4 BHK Signature + Maid (3,750 sqft · ₹4.80 - 5.25 Cr*)">4 BHK Signature + Maid — 3,750 sqft (₹4.80 - 5.25 Cr*)</option>
-                <option value="5 BHK Duplex Sky Villa (5,000+ sqft · Price on Request)">5 BHK Duplex Sky Villa — 5,000+ sqft (Price on Request)</option>
+                <option value="3 BHK Luxury">3 BHK Luxury</option>
+                <option value="3 BHK Signature + 3T" selected>3 BHK Signature + 3T</option>
+                <option value="4 BHK Royal Suite">4 BHK Royal Suite</option>
+                <option value="4 BHK Signature">4 BHK Signature</option>
+                <option value="Signature Duplex">Signature Duplex</option>
               </select>
             </div>
           </div>

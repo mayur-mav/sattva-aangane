@@ -99,6 +99,16 @@
     return element;
   };
 
+  if (data.pricingLeadText) {
+    const el = document.querySelector(".pricing-lead-text");
+    if (el) el.textContent = data.pricingLeadText;
+  }
+
+  if (data.floorplansLeadText) {
+    const el = document.querySelector(".floorplans-lead-text");
+    if (el) el.textContent = data.floorplansLeadText;
+  }
+
   if (Array.isArray(data.facts)) {
     render("#quick-facts", data.facts.map((fact) => `
       <div class="fact-item">
@@ -109,9 +119,55 @@
   }
 
   if (Array.isArray(data.projectDetails)) {
-    render("#project-details", data.projectDetails.map((detail) => `
-      <div class="project-table-row"><strong>${escapeHtml(detail.label)}</strong><span>${escapeHtml(detail.value)}</span></div>
-    `).join(""));
+    render("#project-specs-rows, #project-details", data.projectDetails.map((detail) => {
+      const label = escapeHtml(detail.label || "");
+      const isPrice = Boolean(detail.isPrice || label.toUpperCase() === "PRICE");
+      const isRera = Boolean(detail.isRera || label.toUpperCase().includes("RERA"));
+
+      if (isPrice) {
+        return `
+          <div class="spec-row spec-row-price">
+            <div class="spec-label">${label}</div>
+            <div class="spec-value">
+              <span class="spec-price-strong">${escapeHtml(detail.value)}</span>
+              <button class="spec-quote-btn" type="button" data-scroll-enquire>${escapeHtml(detail.buttonText || "Get Price List →")}</button>
+            </div>
+          </div>
+        `;
+      }
+
+      if (isRera) {
+        const lines = String(detail.value || "").split(/\n|<br\s*\/?>/).map((line) => line.trim()).filter(Boolean);
+        const formattedRera = lines.map((l) => `<span>${escapeHtml(l)}</span>`).join("<br>");
+        return `
+          <div class="spec-row spec-row-rera">
+            <div class="spec-label">${label}</div>
+            <div class="spec-value rera-value">
+              ${formattedRera}
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="spec-row">
+          <div class="spec-label">${label}</div>
+          <div class="spec-value">${escapeHtml(detail.value)}</div>
+        </div>
+      `;
+    }).join(""));
+  }
+
+  if (Array.isArray(data.specHighlights)) {
+    const badgesContainer = document.querySelector("#project-spec-badges");
+    if (badgesContainer) {
+      badgesContainer.innerHTML = `
+        <h3 class="intro-highlights-heading">PROJECT HIGHLIGHTS</h3>
+        ${data.specHighlights.map((badge) => `
+          <span class="intro-badge">&#10022; ${escapeHtml(badge)}</span>
+        `).join("")}
+      `;
+    }
   }
 
   if (Array.isArray(data.highlights)) {
@@ -137,17 +193,27 @@
           <strong class="row-config-title">${escapeHtml(price.configuration)}</strong>
           <span class="row-price-sub">${escapeHtml(price.subLabel || "PRICE")}</span>
         </div>
-        <div class="col-cell col-area">
+        <div class="col-cell col-area" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock saleable area for ${escapeHtml(price.configuration)}">
           <span class="cell-mobile-label">Saleable Area:</span>
-          <span class="row-area-val">${escapeHtml(price.area)}</span>
+          <div class="table-locked-val-wrap">
+            <span class="row-area-val blur-locked">${escapeHtml(price.area)}</span>
+            <div class="lock-circle-badge table-lock-circle" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
         </div>
-        <div class="col-cell col-price">
+        <div class="col-cell col-price" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock starting price for ${escapeHtml(price.configuration)}">
           <span class="cell-mobile-label">Starting Price*:</span>
-          <span class="row-price-val">${escapeHtml(price.startingPrice || price.starting)}</span>
+          <div class="table-locked-val-wrap">
+            <span class="row-price-val blur-locked">${escapeHtml(price.startingPrice || price.starting)}</span>
+            <div class="lock-circle-badge table-lock-circle" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+          </div>
         </div>
         <div class="col-cell col-cta">
           <button class="button-get-price" type="button" data-scroll-enquire aria-label="Get Price for ${escapeHtml(price.configuration)}">
-            Get Price
+            Unlock Price &amp; Area
           </button>
         </div>
       </div>
@@ -205,17 +271,32 @@
             <p class="plan-details-desc">${escapeHtml(plan.description)}</p>
 
             <div class="plan-metrics-grid">
-              <div class="metric-box">
-                <strong class="metric-val">${escapeHtml(plan.saleable || "3,725")}</strong>
+              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock saleable area details">
+                <div class="metric-locked-wrap">
+                  <strong class="metric-val blur-locked">${escapeHtml(plan.saleable || "1,796 sq. ft.")}</strong>
+                  <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  </div>
+                </div>
                 <span class="metric-lbl">SQ FT SALEABLE</span>
               </div>
-              <div class="metric-box">
-                <strong class="metric-val">${escapeHtml(plan.carpet || "2,417")}</strong>
+              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock RERA carpet area details">
+                <div class="metric-locked-wrap">
+                  <strong class="metric-val blur-locked">${escapeHtml(plan.carpet || "1,115 sq. ft.")}</strong>
+                  <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  </div>
+                </div>
                 <span class="metric-lbl">SQ FT RERA CARPET</span>
               </div>
-              <div class="metric-box">
-                <strong class="metric-val">${escapeHtml(plan.price || "₹5.40 Cr*")}</strong>
-                <span class="metric-lbl">ONWARDS</span>
+              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock starting price details">
+                <div class="metric-locked-wrap">
+                  <strong class="metric-val blur-locked">${escapeHtml(plan.price || "₹2.81 Cr*")}</strong>
+                  <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  </div>
+                </div>
+                <span class="metric-lbl">STARTING PRICE</span>
               </div>
             </div>
 
@@ -1280,6 +1361,61 @@
     });
   };
 
+  const selectDropdownOption = (select, targetConfig) => {
+    if (!select) return;
+    const rawTarget = String(targetConfig || "").trim();
+    if (!rawTarget) return;
+
+    const normalize = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const targetNorm = normalize(rawTarget);
+
+    let match = null;
+
+    // 1. Direct exact or substring match in value or text
+    match = Array.from(select.options).find((opt) => {
+      const vNorm = normalize(opt.value);
+      const tNorm = normalize(opt.textContent);
+      return vNorm === targetNorm || tNorm === targetNorm || vNorm.includes(targetNorm) || targetNorm.includes(vNorm);
+    });
+
+    // 2. Keyword-based matching
+    if (!match) {
+      if (/duplex|sky\s*villa/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /duplex|villa/i.test(o.value) || /duplex|villa/i.test(o.textContent));
+      } else if (/4\s*bhk.*(?:signature|type\s*5a|3750|2991)/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /4\s*bhk.*signature/i.test(o.value) || /4\s*bhk.*signature/i.test(o.textContent));
+      } else if (/4\s*bhk.*(?:royal|maid|4b4t|2695|2950)/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /4\s*bhk.*royal/i.test(o.value) || /4\s*bhk.*royal/i.test(o.textContent));
+      } else if (/4\s*bhk/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /4\s*bhk/i.test(o.value) || /4\s*bhk/i.test(o.textContent));
+      } else if (/3\s*bhk.*(?:type\s*3d|\+\s*3t|2311|2350|premium)/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /3\s*bhk.*(?:premium|signature)/i.test(o.value) || /3\s*bhk.*(?:premium|signature)/i.test(o.textContent));
+      } else if (/3\s*bhk.*(?:luxury|3b3t|1796|1794)/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /3\s*bhk.*luxury/i.test(o.value) || /3\s*bhk.*luxury/i.test(o.textContent));
+      } else if (/3\s*bhk/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /3\s*bhk/i.test(o.value) || /3\s*bhk/i.test(o.textContent));
+      } else if (/2\.5\s*bhk/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /2\.5\s*bhk/i.test(o.value) || /2\.5\s*bhk/i.test(o.textContent));
+      } else if (/2\s*bhk/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /2\s*bhk/i.test(o.value) || /2\s*bhk/i.test(o.textContent));
+      } else if (/1\s*bhk/i.test(rawTarget)) {
+        match = Array.from(select.options).find((o) => /1\s*bhk/i.test(o.value) || /1\s*bhk/i.test(o.textContent));
+      }
+    }
+
+    if (match) {
+      select.value = match.value;
+      Array.from(select.options).forEach((opt) => {
+        opt.selected = (opt.value === match.value);
+      });
+      const shell = select.closest(".custom-dropdown-shell");
+      const trigger = shell?.querySelector(".custom-dropdown-trigger");
+      if (trigger) {
+        syncCustomSelect(select, trigger);
+      }
+    }
+  };
+
   const closeCustomDropdowns = (except) => {
     document.querySelectorAll(".custom-dropdown-shell.is-open").forEach((shell) => {
       if (shell === except) return;
@@ -1557,53 +1693,8 @@
     if (popupSubmitLabel) popupSubmitLabel.textContent = submitText;
     if (popupSourceContext) popupSourceContext.value = source;
 
-    if (popupConfigSelect && config) {
-      const configStr = String(config).trim();
-      let matchOpt = null;
-
-      if (/duplex|sky\s*villa/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /duplex/i.test(o.value) || /duplex/i.test(o.textContent));
-      } else if (/signature/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /signature/i.test(o.value) || /signature/i.test(o.textContent));
-      } else if (/royal/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /royal/i.test(o.value) || /royal/i.test(o.textContent));
-      } else if (/premium/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /premium/i.test(o.value) || /premium/i.test(o.textContent));
-      } else if (/luxury/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /luxury/i.test(o.value) || /luxury/i.test(o.textContent));
-      } else if (/4\s*bhk\s*grande/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /grande/i.test(o.value) || /grande/i.test(o.textContent));
-      } else if (/4\s*bhk\s*luxe/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /luxe/i.test(o.value) || /luxe/i.test(o.textContent));
-      } else if (/3\s*bhk.*3\s*t/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /3\s*bhk.*\+?\s*3t/i.test(o.value) || /3\s*bhk.*\+?\s*3t/i.test(o.textContent));
-      } else if (/3\s*bhk.*2\s*t/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /3\s*bhk.*\+?\s*2t/i.test(o.value) || /3\s*bhk.*\+?\s*2t/i.test(o.textContent));
-      } else if (/2\s*bhk/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /2\s*bhk/i.test(o.value) || /2\s*bhk/i.test(o.textContent));
-      } else if (/1\s*bhk/i.test(configStr)) {
-        matchOpt = Array.from(popupConfigSelect.options).find((o) => /1\s*bhk/i.test(o.value) || /1\s*bhk/i.test(o.textContent));
-      }
-
-      if (!matchOpt) {
-        matchOpt = Array.from(popupConfigSelect.options).find(
-          (o) => o.value.toLowerCase().includes(configStr.toLowerCase()) ||
-                 configStr.toLowerCase().includes(o.value.toLowerCase()) ||
-                 o.textContent.toLowerCase().includes(configStr.toLowerCase())
-        );
-      }
-
-      if (matchOpt) {
-        popupConfigSelect.value = matchOpt.value;
-        Array.from(popupConfigSelect.options).forEach((opt) => {
-          opt.selected = opt.value === matchOpt.value;
-        });
-        const shell = popupConfigSelect.closest(".custom-dropdown-shell");
-        const trigger = shell?.querySelector(".custom-dropdown-trigger");
-        if (trigger) {
-          syncCustomSelect(popupConfigSelect, trigger);
-        }
-      }
+    if (popupConfigSelect) {
+      selectDropdownOption(popupConfigSelect, config);
     }
 
     enquiryModal.hidden = false;
@@ -1684,13 +1775,21 @@
         subtitle = "High-resolution architectural brochure and project layout on WhatsApp within minutes.";
         submitText = "Download Brochure PDF";
         source = "Brochure Download";
+      } else if (btn.closest(".metric-box-locked")) {
+        const activeTab = document.querySelector(".floorplan-pill-tab.is-active, .floorplan-pill-tab[aria-selected='true']");
+        const cfgTitle = activeTab ? activeTab.textContent.trim() : "";
+        config = cfgTitle || "";
+        title = cfgTitle ? `Unlock Details for ${cfgTitle}` : "Unlock Floor Plan & Pricing Details";
+        subtitle = "Enter your details to receive unmasked square footage, carpet area & official price breakdown on WhatsApp.";
+        submitText = "Unlock Details";
+        source = `Floor Plan Metric Lock - ${cfgTitle || "General"}`;
       } else if (btn.classList.contains("button-get-price") || btn.closest(".pricing-table-row")) {
         const row = btn.closest(".pricing-table-row");
         const cfgTitle = row ? row.querySelector(".row-config-title")?.textContent.trim() : "";
         config = cfgTitle || "";
-        title = cfgTitle ? `Get Price For ${cfgTitle}` : "Get Official Price List";
+        title = cfgTitle ? `Unlock Price & Area for ${cfgTitle}` : "Unlock Official Price & Area";
         subtitle = "All-inclusive pricing, floor-rise options, and payment plans on WhatsApp within minutes.";
-        submitText = cfgTitle ? `Get ${cfgTitle} Price` : "Get Price List";
+        submitText = cfgTitle ? `Unlock ${cfgTitle} Price` : "Unlock Price";
         source = `Pricing Table - ${cfgTitle || "General"}`;
       } else if (btn.classList.contains("button-complete-costing")) {
         title = "Request Detailed Cost Sheet";
@@ -1746,6 +1845,17 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && enquiryModal && !enquiryModal.hidden) {
       closeEnquiryModal();
+    }
+  });
+
+  // Enter or Space key triggers locked role="button" elements
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      const lockedRoleBtn = e.target.closest && e.target.closest("[data-scroll-enquire][role='button']");
+      if (lockedRoleBtn && lockedRoleBtn.tagName !== "BUTTON" && lockedRoleBtn.tagName !== "A") {
+        e.preventDefault();
+        lockedRoleBtn.click();
+      }
     }
   });
 

@@ -11,6 +11,9 @@ window.sattvaData = {
 
   reraNo: "PRM/KA/RERA/1251/446/PR/180926/008944",
 
+  pricingLeadText: "Explore five luxury high-rise configurations with tailored payment schedules and launch benefits. Configuration-wise pricing depends on floor band, tower orientation (lake-facing vs courtyard-facing) and car parking allotment and is shared on request. Unlock the official price sheet and launch availability below.",
+  floorplansLeadText: "Five distinct high-rise luxury configurations, all taken from the developer's official unit plan set (3 BHK Luxury, 3 BHK Signature + 3T, 4 BHK Royal Suite, 4 BHK Signature + Maid, and 5 BHK Duplex Sky Villa). Unlock each configuration below to view detailed architectural drawings, carpet breakup and unit dimensions.",
+
   facts: [
     { value: "10.2 Acres", label: "Lakeside Development" },
     { value: "80%", label: "Open Spaces" },
@@ -28,18 +31,25 @@ window.sattvaData = {
     { value: "₹2.69 Cr*", label: "LAUNCH PAD STARTING PRICE" }
   ],
   projectDetails: [
-    { label: "Project", value: "Sattva Aangané (Code name: Courtyard)" },
-    { label: "Developer", value: "Sattva Group" },
-    { label: "RERA Registration", value: "" },
-    { label: "Land & Scale", value: "10.2 acres (10 acres 4 guntas) with 80% open spaces and 2 acres of central greens, located 300 meters from Cheemasandra Lake" },
-    { label: "Structure", value: "7 iconic towers (4B+G+30 to 42 Floors)" },
-    { label: "Residences", value: "977 thoughtfully designed residences (4 apartments per floor)" },
-    { label: "Design Concept", value: "Biophilic architecture, 3.3-metre floor-to-ceiling heights, four-sided ventilation with no shared walls" },
-    { label: "Configurations", value: "3 BHK (1,800 - 2,300 sq. ft.), 4 BHK (2,600 - 3,000 sq. ft.), and Signature Duplexes (4,200 - 5,400 sq. ft.)" },
-    { label: "Pricing Range", value: "₹2.81 Cr to ₹8.24 Cr (Special Launch Pad pricing from ₹2.69 Cr for the first 75 customers)" },
-    { label: "Signature Amenities", value: "45,355 sq. ft. clubhouse across three levels, rooftop lounges in every tower, temperature-controlled indoor pool, vertical gardens" },
-    { label: "Strategic Location", value: "Old Madras Road (NH 75), near Budigere Cross, approx 8-10 km from STRR" },
-    { label: "Target Audience", value: "" }
+    { label: "PROJECT", value: "Sattva Aangané, Old Madras Road (NH-75), near Budigere Cross, Aavalahalli, East Bengaluru 560049" },
+    { label: "DEVELOPER", value: "Sattva Group (Salarpuria Sattva) · 30+ Years of Engineering Excellence" },
+    { label: "CONFIGURATIONS", value: "3 BHK Luxury, 3 BHK + Maid, 4 BHK Royal & Signature Suites, 5 BHK Sky Duplexes" },
+    { label: "LAND & SCALE", value: "~10-Acre Lakeside Enclave · 80%+ Open Greenery · 5 Towers up to G+42 · 625 Residences" },
+    { label: "PRICE", value: "From ₹2.66 Cr* (₹2.66 - 5.25 Cr*)", isPrice: true, buttonText: "Get Price List →" },
+    { label: "STATUS", value: "New Launch · Expression of Interest (EOI) Open" },
+    {
+      label: "K-RERA NO.",
+      value: "Official Registration: PRM/KA/RERA/1251/446/PR/180926/008944",
+      isRera: true
+    }
+  ],
+  specHighlights: [
+    "~10-Acre Lakeside Enclave",
+    "80%+ Open Landscaped Greens",
+    "45,000 Sqft Grand Luxury Clubhouse",
+    "Lakeside Infinity Swimming Pool",
+    "Biophilic Aangan Courtyard Gardens",
+    "Cheemasandra Lake Frontage"
   ],
   highlights: [
     "10.2-acre lakeside development located just 300 meters from Cheemasandra Lake.",
@@ -190,7 +200,7 @@ window.sattvaData = {
       description: "An exclusive duplex sky villa featuring a double-height family lounge, study/hobby room, and expansive terraces.",
       saleable: "5,150 sq. ft.",
       carpet: "3,091 sq. ft.",
-      price: "Price on Request (Approx. ₹6.88 Cr - ₹8.24 Cr*)",
+      price: "Price on",
       image: "assets/4bhk-duplex-floor-plan.webp",
       bullets: [
         "5,150 sq. ft. signature duplex layout",
